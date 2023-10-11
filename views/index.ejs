@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="eng" >
+    <head>
+        <title>
+            To Do List
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+   <div class="box" id="heading">
+
+   <h1><%=listTitle%></h1>
+        </div>
+           <div class="box">   
+                <% for(var i=0;i<newListitems.length;i++){%>
+                    <div class="item"><input type="checkbox">
+                    <p><%=newListitems[i]%></p>
+                </div>
+               <% }%>            
+<form class="" action="/" method="post">
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button type="submit" class="newIt" name="list" value=<%=listTitle%>>+</button>        
+        </form>
+    </div>
+    <form class="clsbtn" action="/delete" method="post">
+        <button type="submit"  class="clearBtn"name="list" value=<%=listTitle%>>Clear</button>        
+            </form>
+   
+    </body>
+</html>
